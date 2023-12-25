@@ -72,4 +72,47 @@ public class Dog extends Animal {
 }
 ```
 # **Abstraction**
+Abstraction is to design the simple declaration in parent level class and complex implementation will be implemented
+in the child class. This increase the readability and reuseability of the code. For example, Creature has only abstract method
+and the method body will be implemented in the child classes such as Human and Animal. 
 
+```
+package abstraction;
+
+public abstract class Creature {
+    
+    public abstract void attack(); 
+    public abstract void printInfo(); 
+
+}
+```
+```
+package abstraction;
+
+public class Human extends Creature {
+    @Override
+    public void attack() {
+        System.out.println("Human attacked");
+    }   
+
+    @Override 
+    public void printInfo() {
+        System.out.println("This is human"); 
+    }
+}
+
+package abstraction;
+
+public class Animal extends Creature {
+    @Override
+    public void attack() {
+        System.out.println("Animal Attacked");
+    }   
+
+    @Override 
+    public void printInfo() {
+        System.out.println("This is animal"); 
+    }
+}
+
+```
