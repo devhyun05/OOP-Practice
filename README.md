@@ -1,10 +1,10 @@
 This repository is for understanding the concept of object oriented programming 
 
 # **Encapsulation** 
-Encapsulation is to hide important data with the private keyword, and only can be accessed by some specific methods. <br/>
-For example, let's think about self-driving car, and it only has one property speed. From a design perspective, it is <br/>
-dangerous if the developer can directly access to the speed property at some points. It can cause the car accident <br/> 
-Therefore, we use the encapsulation to hide the speed with private keyword, and only can accessible through specific methods <br/>
+Encapsulation is to hide important data with the private keyword, and only can be accessed by some specific methods. 
+For example, let's think about self-driving car, and it only has one property speed. From a design perspective, it is 
+dangerous if the developer can directly access to the speed property at some points. It can cause the car accident 
+Therefore, we use the encapsulation to hide the speed with private keyword, and only can accessible through specific methods 
 with proper validation code. 
 
 ```
