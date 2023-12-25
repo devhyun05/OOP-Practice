@@ -40,7 +40,71 @@ public class Car {
 ```
 
 # **Inheritance**
+Inheritance is to inherit some repeated properties and behaviors from the parent class to child classes to increase code reuseability and efficiency.
+Also, it can use protected keyword to only send some elements to child classes which increase the security of the system. The relationship between 
+parent class, child class become more strong, and it results clear top-to-bottom hierarchy.
 
+```
+package inheritance;
+
+public abstract class Animal {
+    protected String name; 
+    protected int age; 
+
+    public Animal(String name, int age) {
+        this.name = name; 
+        this.age = age; 
+    }
+
+    public void eat() {
+        System.out.println(this.name + " is eating"); 
+    }
+
+    abstract void sound(); 
+}
+```
+```
+package inheritance;
+
+public class Cat extends Animal {
+    private String catType; 
+
+    public Cat(String name, int age, String catType) {
+        super(name, age); 
+        this.catType = catType;
+    }
+
+    public void printType() {
+        System.out.println("Cat type: " + catType);
+    }
+    
+    @Override 
+    public void sound() {
+        System.out.println("Meow!");
+    }
+
+}
+package inheritance;
+
+public class Dog extends Animal {
+    private String dogType; 
+
+    public Dog(String name, int age, String dogType) {
+        super(name, age); 
+        this.dogType = dogType;
+    }
+
+    public void printType() {
+        System.out.println("Dog type: " + dogType);
+    }
+    
+    @Override 
+    public void sound() {
+        System.out.println("Bark!");
+    }
+
+}
+```
 # **Polymorphism**
 Polymorphism refers a single function, method, or operator work with multiple types of data. For example, we have parent abstract class Animal
 and 1,000 child animal classes such as Cat, Dog, etc. We want to implement the method to print sound of the animal. 
