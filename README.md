@@ -42,6 +42,34 @@ public class Car {
 # **Inheritance**
 
 # **Polymorphism**
+Polymorphism refers a single function, method, or operator work with multiple types of data. For example, we have parent abstract class Animal
+and 1,000 child animal classes such as Cat, Dog, etc. We want to implement the method to print sound of the animal. 
+If we don't use method overriding, we will have 1,000 different methods to print sounds, and it will be difficult 
+to remember at some points. Therefore, we can simply declare abstract method in parent, and override in child class 
+to simply it. 
 
+```
+package polymorphism;
+
+abstract class Animal {
+    abstract void sound(); 
+
+}
+```
+```
+public class Cat extends Animal{
+    @Override
+    public void sound() {
+        System.out.println("Mow!");
+    }
+}
+
+public class Dog extends Animal {
+    @Override 
+    public void sound() {
+        System.out.println("Bark!"); 
+    }
+}
+```
 # **Abstraction**
 
